@@ -1,6 +1,9 @@
 import React from 'react';
 import { FC, ReactNode } from 'react';
 
+// デフォルトの404ページ
+// export const dynamicParams = false;
+
 type Props = {
   children?: ReactNode;
 };
@@ -9,7 +12,7 @@ const HomeLayout: FC<Props> = ({ children }) => {
   return (
     <div
       style={{
-        padding: '20px',
+        padding: '120px',
         background: '#ddd',
       }}>
       {children}
