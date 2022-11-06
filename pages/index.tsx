@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import { client } from 'libs/client';
+import { client } from 'libs/microCMS';
 import styles from 'styles/Home.module.scss';
+import { blog } from 'microCMS/types/response';
 
 //SSG
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'blog' });
-  console.log(data);
+  const data = await client.blog.$get({ query: { limit: 10 } });
   return {
     props: {
       blog: data.contents,
@@ -14,12 +14,12 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({ blog }) {
+export default function Home({ blog }: { blog: blog[] }) {
   return (
     <div className={styles.container}>
       {blog.map(blog => (
         <li key={blog.id}>
-          <Link href={`test/${blog.id}`}>{blog.title}</Link>
+          <Link href={`blog/${blog.id}`}>{blog.title}</Link>
         </li>
       ))}
     </div>

@@ -1,0 +1,28 @@
+{
+  "apiFields": [
+    {
+      "idValue": "SXm7VV0uRe",
+      "fieldId": "title",
+      "name": "タイトル",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    { "fieldId": "image", "name": "アイキャッチ", "kind": "media" },
+    { "fieldId": "toc_visible", "name": "目次", "kind": "boolean" },
+    {
+      "fieldId": "category",
+      "name": "カテゴリー",
+      "kind": "relation",
+      "required": true
+    },
+    { "fieldId": "tags", "name": "タグ", "kind": "relationList" },
+    {
+      "fieldId": "body",
+      "name": "本文",
+      "kind": "richEditor",
+      "required": true
+    }
+  ],
+  "customFields": []
+}
