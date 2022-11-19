@@ -32,3 +32,12 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### スキーマから type の生成
+
+- `npm run gen:types`
+- ただし今はリレーションの自動生成がうまく行かないためため手動でリレーションに設定する
+- 今の所の対象: blog の`category, tags`プロパティー
+
+- `npm run api:build`
+  - このコマンドで$api.ts ファイル生成
