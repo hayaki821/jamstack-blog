@@ -28,10 +28,7 @@ jobs:
           node-version: 16.x
 
       - name: npm install and build
-        run: |
-          touch .env && echo "${{ secrets.BASE_URL }}" >> .env
-          npm install
-          npm run build
+        run: touch .env && echo "${{ secrets.BASE_URL }}" >> .env && npm install && npm run build
 
       - name: Deploy to netlify
         run: npx netlify-cli deploy --dir=./next
