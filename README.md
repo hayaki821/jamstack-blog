@@ -1,5 +1,25 @@
 - サイト: https://incomparable-cat-026e9e.netlify.app/
 
+## 機能
+
+- 記事一覧
+- カテゴリー別記事一覧
+- タグ別記事一覧
+- 人気の記事一覧
+- 最新の記事一覧
+- 検索
+- パンくずリスト
+- 記事詳細
+  - 目次
+  - SNS シェアボタン
+  - 下書きプレビュー
+  - 関連記事
+- サイトマップ
+- バナー
+- GA
+- RSS
+- PWA
+
 ## Getting Started
 
 First, run the development server:

@@ -28,7 +28,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 
 export const getStaticPaths = async () => {
   const data = await client.blog.$get();
-
   const paths = data.contents.map(content => ({
     params: { id: content.id },
   }));
